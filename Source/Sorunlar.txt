@@ -1,0 +1,3 @@
+Bu dosyada projenin ilerleyiþi sýrasýnda karþýlaþýlan sorunlar ve çözümler anlatýlmaktadýr.
+
+Sorun 1: Birden fazla alanýn primary key olarak tutulduðu tablolar
