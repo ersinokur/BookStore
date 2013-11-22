@@ -13,6 +13,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1E63626A-2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Ioc", "BookStore.Ioc\BookStore.Ioc.csproj", "{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolitionItems", "SolitionItems", "{DA866245-5FA5-4434-821B-BECDCEE5203C}"
+	ProjectSection(SolutionItems) = preProject
+		Sorunlar.txt = Sorunlar.txt
+		ToDoList.txt = ToDoList.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{2A1BEDAE-4488-4BF5-AEB5-6A783931A701}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{049079F2-A070-4F7A-81E0-BBB48EFED075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Foundation", "BookStore.Foundation\BookStore.Foundation.csproj", "{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F16DFF30-E8A5-4866-BF39-523380589EBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,11 +53,18 @@ Global
 		{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D3A44D45-BD23-46E1-9762-D58FD9DA58A3} = {1E63626A-2ED8-49BA-BD0E-AB0B23807781}
+		{69A76664-FAE1-4430-97B7-58E4DED15EE8} = {2A1BEDAE-4488-4BF5-AEB5-6A783931A701}
+		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD} = {049079F2-A070-4F7A-81E0-BBB48EFED075}
+		{54CE460E-EF73-4B00-B2AD-955C8DB6241D} = {F16DFF30-E8A5-4866-BF39-523380589EBF}
 	EndGlobalSection
 EndGlobal
