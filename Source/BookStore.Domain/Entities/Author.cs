@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
+using BookStore.Domain.EntitiesMetadata;
 
 namespace BookStore.Domain.Entities
 {
-   public class Author
+   [MetadataType(typeof(AtuhorMetadata))]
+   public class Author : BaseEntity
     {
-        public int AuthorId { get; set; }
         public string FirstName  { get; set; }
+
         public string LastName { get; set; }
-        public DateTime BirthDate { get; set; } //****** columns birdate
+
+        public DateTime BirthDate { get; set; }
+
         public DateTime DeathDate { get; set; }
+
+        public virtual List<Book> Books { get; set; }
     }
 }

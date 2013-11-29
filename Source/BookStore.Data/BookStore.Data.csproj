@@ -48,9 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthorDataStore.cs" />
+    <Compile Include="BookRepository.cs" />
+    <Compile Include="BookStoreContext.cs" />
     <Compile Include="EntityFrameWorks\BookStoreContext.cs" />
+    <Compile Include="IBookRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EntityFrameWorks\BaseDataStoreForEntityFrameWork.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="Utils\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
