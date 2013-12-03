@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace BookStore.Domain.Entities
 {
     [MetadataType(typeof(BookMetadata))]
-    public partial class Book : BaseEntity
+    public partial class Book : BaseEntity<int>
     {
         public string ISBN { get; set; }
 

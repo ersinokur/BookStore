@@ -51,5 +51,30 @@ namespace BookStore.Data.EntityFrameWorks
         {
             throw new NotImplementedException();
         }
+
+        public IQueryable<T> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<T> FindBy(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Edit(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

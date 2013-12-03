@@ -5,8 +5,8 @@ using BookStore.Domain.EntitiesMetadata;
 
 namespace BookStore.Domain.Entities
 {
-   [MetadataType(typeof(AtuhorMetadata))]
-   public class Author : BaseEntity
+   [MetadataType(typeof(AuthorMetadata))]
+   public class Author : BaseEntity<int>
     {
         public string FirstName  { get; set; }
 

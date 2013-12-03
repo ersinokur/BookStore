@@ -1,6 +1,6 @@
 ﻿namespace BookStore.Domain.EntitiesMetadata
 {
-    public sealed class AtuhorMetadata
+    public sealed class AuthorMetadata
     {
     }
 }

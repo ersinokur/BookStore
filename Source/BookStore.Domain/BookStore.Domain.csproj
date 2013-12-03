@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
-    <Compile Include="EntitiesMetadata\AtuhorMetadata.cs" />
+    <Compile Include="EntitiesMetadata\AuthorMetadata.cs" />
+    <Compile Include="EntitiesMetadata\CategoryMetadata.cs" />
     <Compile Include="Entities\Book.cs" />
     <Compile Include="EntitiesMetadata\BookMetadata.cs" />
     <Compile Include="Entities\Author.cs" />
+    <Compile Include="Entities\Category.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
