@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookStore.Domain.Entities
 {
@@ -8,5 +9,7 @@ namespace BookStore.Domain.Entities
         public string Name { get; set; }
 
         public string Description { get; set; }
+
+        public virtual List<Book> Books { get; set; }
     }
 }

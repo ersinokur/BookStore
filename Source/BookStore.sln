@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Data", "BookStore.Data\BookStore.Data.csproj", "{54CE460E-EF73-4B00-B2AD-955C8DB6241D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "BookStore.Domain\BookStore.Domain.csproj", "{ECBCB89A-9444-4FB7-A493-FA6C325D1367}"
@@ -8,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Business", "BookStore.Business\BookStore.Business.csproj", "{69A76664-FAE1-4430-97B7-58E4DED15EE8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Test", "BookStore.Test\BookStore.Test.csproj", "{D3A44D45-BD23-46E1-9762-D58FD9DA58A3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1E63626A-2ED8-49BA-BD0E-AB0B23807781}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Ioc", "BookStore.Ioc\BookStore.Ioc.csproj", "{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}"
 EndProject
@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolitionItems", "SolitionIt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Foundation", "BookStore.Foundation\BookStore.Foundation.csproj", "{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Winform", "BookStore.Winform\BookStore.Winform.csproj", "{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1E57B3B-9DD8-44FA-B376-EE6CB9897EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

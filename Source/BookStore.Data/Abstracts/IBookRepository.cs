@@ -4,7 +4,7 @@ using BookStore.Domain.Entities;
 
 namespace BookStore.Data
 {
-    interface IBookRepository
+    public interface IBookRepository : IRepository<Book>
     {
         IQueryable<Book> GetPopularBooks();
 
