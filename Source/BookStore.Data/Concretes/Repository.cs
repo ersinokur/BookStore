@@ -10,19 +10,39 @@ namespace BookStore.Data
     public abstract class Repository<T> :IRepository<T> where T : class
     {
         readonly BookStoreContext _context;
+
         public Repository()
         {
             _context = new BookStoreContext();
         }
 
-        public virtual IQueryable<T> GetAll()
+        public IQueryable<T> Get(Expression<Func<T, bool>> predicate = null)
         {
-            return _context.Set<T>();
+            var source =  _context.Set<T>().AsQueryable();
+
+            if (predicate != null)
+            {
+                source = source.Where(predicate);
+            }
+
+            return source;
         }
 
-        public IQueryable<T> FindBy(Expression<Func<T, bool>> predicate)
+        public IQueryable<T> GetWith(Expression<Func<T, bool>> predicate = null, params string[] includededEntities)
         {
-            return _context.Set<T>().Where(predicate);
+            var source = _context.Set<T>().AsQueryable();
+
+            if (predicate != null)
+            {
+                source = source.Where(predicate);
+            }
+
+            foreach (var includededEntity in includededEntities)
+            {
+                source = source.Include(includededEntity);
+            }
+
+            return source;
         }
 
         public virtual void Add(T entity)
@@ -44,5 +64,7 @@ namespace BookStore.Data
         {
             _context.SaveChanges();
         }
+
+    
     }
 }

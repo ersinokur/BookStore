@@ -12,25 +12,19 @@ namespace BookStore.Data
 
         public DbSet<Category> Categories { get; set; }
 
-        public BookStoreContext() : base("Data Source=.;Initial Catalog=BookStore;Integrated Security=True")
+        public BookStoreContext()
         {
-        }
-
-        static BookStoreContext()
-        {
-            try
-            {
-                Database.SetInitializer<BookStoreContext>(new BookStoreContextSeedInitializer());
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
+            Database.SetInitializer<BookStoreContext>(new BookStoreContextSeedInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // fluent api
+            //modelBuilder.Entity<User>()
+            //   .Property(u => u.DisplayName)
+            //   .HasColumnName("display_name");
         }
 
     }

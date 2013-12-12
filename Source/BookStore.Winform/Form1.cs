@@ -22,27 +22,22 @@ namespace BookStore.Winform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-         
-
-            try
+            using (var db = new BookStoreContext())
             {
-                var repo = new BookRepository();
-                var service = new BookService(repo);
+                db.Categories.Add(new Category
+                    {
+                        Name = "cat1"
+                    });
 
-                service.Add(new Book
+                try
                 {
-                    Title = "c#",
-                    Edition = 2,
-                    Decription = "test book",
-                    Volume = 2000,
-                });
-                var books = service.GetAll().ToList();
-                dataGridView1.DataSource = books;
-            }
-            catch (Exception ee)
-            {
-                
-                throw;
+                    db.SaveChanges();
+                }
+                catch (Exception ee)
+                {
+                    
+                }
+          
             }
           
 

@@ -9,7 +9,7 @@ namespace BookStore.Data
         public IQueryable<Book> GetPopularBooks()
         {
             // tempsili implementasyon, satis tablosu vs ile join lenmeli
-            return GetAll().OrderBy(a => a.Price).Take(50);
+            return Get().OrderBy(a => a.Price).Take(50);
         }
     }
 }

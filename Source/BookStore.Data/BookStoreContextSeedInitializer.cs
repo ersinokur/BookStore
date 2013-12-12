@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace BookStore.Data
 {
-    public class BookStoreContextSeedInitializer : DropCreateDatabaseAlways<BookStoreContext>
+    public class BookStoreContextSeedInitializer : DropCreateDatabaseIfModelChanges<BookStoreContext>
     {
         protected override void Seed(BookStoreContext context)
         {

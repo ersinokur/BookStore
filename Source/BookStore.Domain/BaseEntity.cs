@@ -11,5 +11,11 @@ namespace BookStore.Domain
         public virtual DateTime CreatedDate { get; set; }
 
         public virtual DateTime ModifiedDate { get; set; }
+
+        public BaseEntity()
+        {
+            CreatedDate = DateTime.Now;
+            ModifiedDate = DateTime.Now;
+        }
     }
 }

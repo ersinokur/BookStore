@@ -7,9 +7,9 @@ namespace BookStore.Data
     // kaynak http://www.tugberkugurlu.com/archive/generic-repository-pattern-entity-framework-asp-net-mvc-and-unit-testing-triangle
     public interface IRepository<T> where T : class
     {
-        IQueryable<T> GetAll();
+        IQueryable<T> Get(Expression<Func<T, bool>> predicate=null);
 
-        IQueryable<T> FindBy(Expression<Func<T, bool>> predicate);
+        IQueryable<T> GetWith(Expression<Func<T, bool>> predicate=null, params string[] includededEntities);
 
         void Add(T entity);
 

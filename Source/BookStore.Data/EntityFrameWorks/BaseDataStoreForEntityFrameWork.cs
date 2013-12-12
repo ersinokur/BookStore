@@ -76,5 +76,15 @@ namespace BookStore.Data.EntityFrameWorks
         {
             throw new NotImplementedException();
         }
+
+        public IQueryable<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> predicate = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<T> GetWith(System.Linq.Expressions.Expression<Func<T, bool>> predicate = null, params string[] includededEntities)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
