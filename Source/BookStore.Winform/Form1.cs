@@ -30,13 +30,14 @@ namespace BookStore.Winform
 
                 //class1.doSomething();
 
-                var service = container.Resolve(typeof(ICategoryService), "ICategoryService") as ICategoryService;
+                var service = container.Resolve(typeof(ICategoryService), "") as ICategoryService;
 
-                dataGridView1.DataSource = service.GetAll();
+
+                dataGridView1.DataSource = service.GetAll().ToList();
             }
             catch (Exception ee)
             {
-
+                MessageBox.Show(ee.Message);
             }
     
         }

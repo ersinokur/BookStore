@@ -23,7 +23,8 @@ namespace BookStore.Ioc
             var container = new UnityContainer();
 
             // repos
-            container.RegisterType<BookStore.Data.Abstracts.IRepository<Category>, BookStore.Data.Concretes.Repository<Category>>();
+            //container.RegisterType<BookStore.Data.Abstracts.IRepository<>, BookStore.Data.Concretes.Repository<Category>>();
+            container.RegisterType(typeof(IRepository<>), typeof(Repository<>));
             container.BindInRequestScope<IBookRepository, BookRepository>();
             //container.BindInRequestScope<ICategoryRepository, CategoryRepository>();
             container.RegisterType<ICategoryRepository, CategoryRepository>();

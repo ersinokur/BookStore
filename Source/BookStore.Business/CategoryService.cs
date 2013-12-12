@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using BookStore.Data.Abstracts;
+using BookStore.Domain.Entities;
 
 namespace BookStore.Business
 {
@@ -12,7 +13,7 @@ namespace BookStore.Business
             _categoryRepository = categoryRepository;
         }
 
-        public IQueryable GetAll()
+        public IQueryable<Category> GetAll()
         {
             return _categoryRepository.Get();
         }
