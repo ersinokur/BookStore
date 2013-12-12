@@ -10,8 +10,6 @@ namespace BookStore.Domain.Entities
 
         public string Description { get; set; }
 
-        public string Age { get; set; }
-
         public virtual List<Book> Books { get; set; }
     }
 }

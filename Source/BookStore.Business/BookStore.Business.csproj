@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="AuthorService.cs" />
     <Compile Include="BookService.cs" />
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="IBookService.cs" />
+    <Compile Include="ICategoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceBase.cs" />
   </ItemGroup>

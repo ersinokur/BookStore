@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BookStore.Ioc;
 
 namespace BookStore.Winform
 {
@@ -22,26 +23,19 @@ namespace BookStore.Winform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (var db = new BookStoreContext())
+            try
             {
-                db.Categories.Add(new Category
-                    {
-                        Name = "cat1"
-                    });
+                var container = Bootstrapper.Initialise();
+                var service = container.Resolve(typeof(ICategoryService), "ICategoryService") as ICategoryService;
 
-                try
-                {
-                    db.SaveChanges();
-                }
-                catch (Exception ee)
-                {
-                    
-                }
-          
+                dataGridView1.DataSource = service.GetAll();
             }
-          
+            catch (Exception ee)
+            {
 
-           
+            }
+    
         }
+
     }
 }

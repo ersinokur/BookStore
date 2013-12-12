@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookStore.Winform
@@ -16,16 +13,7 @@ namespace BookStore.Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            try
-            {
-                Application.Run(new Form1());
-            }
-            catch (Exception ex)
-            {
-                var msg = ex.Message;
-                throw;
-            }
+            Application.Run(new Form1());
   
         }
     }

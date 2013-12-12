@@ -47,12 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracts\ICategoryRepository.cs" />
     <Compile Include="Abstracts\IBookRepository.cs" />
     <Compile Include="Abstracts\IRepository.cs" />
     <Compile Include="AuthorDataStore.cs" />
     <Compile Include="BookStoreContext.cs" />
     <Compile Include="BookStoreContextSeedInitializer.cs" />
     <Compile Include="Concretes\BookRepository.cs" />
+    <Compile Include="Concretes\CategoryRepository.cs" />
     <Compile Include="Concretes\Repository.cs" />
     <Compile Include="EntityFrameWorks\BookStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
