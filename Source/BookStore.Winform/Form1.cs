@@ -26,6 +26,10 @@ namespace BookStore.Winform
             try
             {
                 var container = Bootstrapper.Initialise();
+                var class1 = container.Resolve(typeof (Interface1), "") as Interface1;
+
+                //class1.doSomething();
+
                 var service = container.Resolve(typeof(ICategoryService), "ICategoryService") as ICategoryService;
 
                 dataGridView1.DataSource = service.GetAll();

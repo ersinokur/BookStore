@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using BookStore.Domain.Entities;
 
-namespace BookStore.Data
+namespace BookStore.Data.Abstracts
 {
     public interface IBookRepository : IRepository<Book>
     {

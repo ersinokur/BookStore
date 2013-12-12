@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace BookStore.Data.EntityFrameWorks
 {
-    public class BaseDataStoreForEntityFrameWork<T> : IRepository<T> where T :class
+    public class BaseDataStoreForEntityFrameWork<T> : Abstracts.IRepository<T> where T :class
     {
 
         private readonly BookStoreContext _context;

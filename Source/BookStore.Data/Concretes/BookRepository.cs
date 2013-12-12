@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using BookStore.Domain;
+using BookStore.Data.Abstracts;
 using BookStore.Domain.Entities;
 
-namespace BookStore.Data
+namespace BookStore.Data.Concretes
 {
     public class BookRepository : Repository<Book>, IBookRepository
     {

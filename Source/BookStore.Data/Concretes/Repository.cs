@@ -3,8 +3,9 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using BookStore.Data.Abstracts;
 
-namespace BookStore.Data
+namespace BookStore.Data.Concretes
 {
     // kaynak http://www.tugberkugurlu.com/archive/generic-repository-pattern-entity-framework-asp-net-mvc-and-unit-testing-triangle
     public abstract class Repository<T> :IRepository<T> where T : class

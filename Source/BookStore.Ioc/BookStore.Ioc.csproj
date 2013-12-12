@@ -67,6 +67,10 @@
       <Project>{54ce460e-ef73-4b00-b2ad-955c8db6241d}</Project>
       <Name>BookStore.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BookStore.Domain\BookStore.Domain.csproj">
+      <Project>{ecbcb89a-9444-4fb7-a493-fa6c325d1367}</Project>
+      <Name>BookStore.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
