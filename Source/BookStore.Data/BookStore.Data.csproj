@@ -56,7 +56,10 @@
     <Compile Include="Concretes\BookRepository.cs" />
     <Compile Include="Concretes\CategoryRepository.cs" />
     <Compile Include="Concretes\Repository.cs" />
+    <Compile Include="EFUnitOfWork.cs" />
     <Compile Include="EntityFrameWorks\BookStoreContext.cs" />
+    <Compile Include="IEFUnitOfWork.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EntityFrameWorks\BaseDataStoreForEntityFrameWork.cs" />
     <Compile Include="Utils\IRepository.cs" />
