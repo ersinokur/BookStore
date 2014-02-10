@@ -3,10 +3,8 @@ using BookStore.Domain.Entities;
 
 namespace BookStore.Data.Abstracts
 {
-    public interface IBookRepository : IRepository<Book>
+    public interface IBookRepository : IGenericRepository<Book>
     {
         IQueryable<Book> GetPopularBooks();
-
-
     }
 }

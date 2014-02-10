@@ -7,12 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "BookSto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Business", "BookStore.Business\BookStore.Business.csproj", "{69A76664-FAE1-4430-97B7-58E4DED15EE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Test", "BookStore.Test\BookStore.Test.csproj", "{D3A44D45-BD23-46E1-9762-D58FD9DA58A3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Ioc", "BookStore.Ioc\BookStore.Ioc.csproj", "{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolitionItems", "SolitionItems", "{DA866245-5FA5-4434-821B-BECDCEE5203C}"
 	ProjectSection(SolutionItems) = preProject
+		Kaynaklar.txt = Kaynaklar.txt
+		KurulumAyarlari.txt = KurulumAyarlari.txt
 		Sorunlar.txt = Sorunlar.txt
 		ToDoList.txt = ToDoList.txt
 	EndProjectSection
@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9D749B
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Test", "BookStore.Test\BookStore.Test.csproj", "{1491AAAF-5402-45C3-A7AC-46C1EEACED9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,10 +48,6 @@ Global
 		{69A76664-FAE1-4430-97B7-58E4DED15EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A76664-FAE1-4430-97B7-58E4DED15EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A76664-FAE1-4430-97B7-58E4DED15EE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3A44D45-BD23-46E1-9762-D58FD9DA58A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3A44D45-BD23-46E1-9762-D58FD9DA58A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3A44D45-BD23-46E1-9762-D58FD9DA58A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3A44D45-BD23-46E1-9762-D58FD9DA58A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A83566AA-1B41-4C6B-9E77-ABFE1F008AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,6 +60,10 @@ Global
 		{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F367E10B-16B1-4AA2-B6A6-AFE86409F7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1491AAAF-5402-45C3-A7AC-46C1EEACED9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1491AAAF-5402-45C3-A7AC-46C1EEACED9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1491AAAF-5402-45C3-A7AC-46C1EEACED9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1491AAAF-5402-45C3-A7AC-46C1EEACED9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

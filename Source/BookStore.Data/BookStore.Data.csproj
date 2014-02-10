@@ -33,13 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,26 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracts\IAuthorRepository.cs" />
     <Compile Include="Abstracts\ICategoryRepository.cs" />
     <Compile Include="Abstracts\IBookRepository.cs" />
-    <Compile Include="Abstracts\IRepository.cs" />
-    <Compile Include="AuthorDataStore.cs" />
-    <Compile Include="BookStoreContext.cs" />
+    <Compile Include="Abstracts\IGenericRepository.cs" />
+    <Compile Include="Context\BookStoreContext.cs" />
     <Compile Include="BookStoreContextSeedInitializer.cs" />
-    <Compile Include="Concretes\BookRepository.cs" />
-    <Compile Include="Concretes\CategoryRepository.cs" />
-    <Compile Include="Concretes\Repository.cs" />
-    <Compile Include="EFUnitOfWork.cs" />
-    <Compile Include="EntityFrameWorks\BookStoreContext.cs" />
-    <Compile Include="IEFUnitOfWork.cs" />
-    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Concretes\GenericRepositoryforEF.cs" />
+    <Compile Include="UnitOfWork\EFUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Mapping\AuthorMap.cs" />
+    <Compile Include="Mapping\BookMap.cs" />
+    <Compile Include="Mapping\CategoryMap.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EntityFrameWorks\BaseDataStoreForEntityFrameWork.cs" />
-    <Compile Include="Utils\IRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PetaPoco\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BookStore.Domain\BookStore.Domain.csproj">
       <Project>{ECBCB89A-9444-4FB7-A493-FA6C325D1367}</Project>
@@ -74,7 +73,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

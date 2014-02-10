@@ -1,0 +1,7 @@
+1-App.config dosyalarýndaki ilgli data source düzetilmeli
+ <add name="BookStoreContextConnStr" providerName="System.Data.SqlClient" connectionString="Data Source=DEVELOPER\SQLEXPRESSR2;Initial Catalog=BookStore;Integrated Security=True;" />
+
+ 2- Package Manager Console 
+ Enable-Migrations –EnableAutomaticMigrations 
+ 3- PMC > update-database
+

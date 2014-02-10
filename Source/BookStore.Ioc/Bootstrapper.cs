@@ -1,9 +1,9 @@
 ﻿using BookStore.Business;
-using BookStore.Data;
+using BookStore.Data.Abstracts;
 using BookStore.Data.Concretes;
+using BookStore.Data.UnitOfWork;
 using BookStore.Domain.Entities;
 using Microsoft.Practices.Unity;
-using BookStore.Data.Abstracts;
 
 namespace BookStore.Ioc
 {
@@ -22,20 +22,25 @@ namespace BookStore.Ioc
         {
             var container = new UnityContainer();
 
-
             // repos
-            //container.RegisterType<BookStore.Data.Abstracts.IRepository<>, BookStore.Data.Concretes.Repository<Category>>();
-            container.RegisterType(typeof(IRepository<>), typeof(Repository<>));
-            //container.BindInRequestScope<IBookRepository, BookRepository>();
-            //container.BindInRequestScope<ICategoryRepository, CategoryRepository>();
-            container.RegisterType<ICategoryRepository, CategoryRepository>();
+
+            container.RegisterType<IGenericRepository<Author>, GenericRepositoryforEF<Author>>();
+            container.RegisterType<IGenericRepository<Book>, GenericRepositoryforEF<Book>>();
+            container.RegisterType<IGenericRepository<Category>, GenericRepositoryforEF<Category>>();
+
+            ////container.RegisterType<BookStore.Data.Abstracts.IRepository<>, BookStore.Data.Concretes.Repository<Category>>();
+            //container.RegisterType(typeof(IGenericRepository<>), typeof(GenericRepositoryforEF<>));
+            ////container.BindInRequestScope<IBookRepository, BookRepository>();
+            ////container.BindInRequestScope<ICategoryRepository, CategoryRepository>();
+            //container.RegisterType<ICategoryRepository, CategoryRepository>();
 
             // services
             container.BindInRequestScope<IBookService, BookService>();
-            //container.BindInRequestScope<ICategoryService, ICategoryService>();
-            container.RegisterType<ICategoryService, CategoryService>();
+            container.BindInRequestScope<IAuthorService, AuthorService>();
+            container.BindInRequestScope<ICategoryService, CategoryService>();
 
-            container.RegisterType<Interface1, Class1>();
+            // UnitOfWork
+            container.BindInRequestScope<IUnitOfWork, EFUnitOfWork>();
 
             return container;
         }

@@ -1,5 +1,6 @@
-﻿using BookStore.Domain.Entities;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using BookStore.Data.Context;
+using BookStore.Domain.Entities;
 
 namespace BookStore.Data
 {
@@ -7,16 +8,16 @@ namespace BookStore.Data
     {
         protected override void Seed(BookStoreContext context)
         {
-            context.Categories.Add(new Category 
+            context.Categories.Add(new Category
             {
-                Name = "cat1",
-                Description = "sample desc",
+                CategoryName = "cat1",
+                CategoryDescription = "sample desc",
             });
 
             context.Categories.Add(new Category
             {
-                Name = "cat2",
-                Description = "sample desc",
+                CategoryName = "cat2",
+                CategoryDescription = "sample desc",
             });
 
             context.SaveChanges();

@@ -3,7 +3,7 @@ using BookStore.Domain.Entities;
 
 namespace BookStore.Business
 {
-    public interface IBookService
+    public interface IBookService : IGenericService<Book>
     {
         IQueryable<Book> GetAll();
     }

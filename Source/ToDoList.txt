@@ -1,2 +1,10 @@
-21.11.2013  ToDoList
+ ToDoList
+
+ - Analizde verilen tüm modellerin sýnýflarý /Domain altýnda  hazýrlanacak
+ - Her model için servisler yazýlacak ve servis fonksiyonlarýnýn tamamýný test eden,
+   unit test sýnýflarý hazýrlanacak
+   -Projenin tüm alt yapýsý hazýrlandýktan sonra ui tasarýmýna baþlanacak.
+
+
+
 

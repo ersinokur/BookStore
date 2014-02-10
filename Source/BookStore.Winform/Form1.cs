@@ -1,15 +1,7 @@
-﻿using BookStore.Business;
-using BookStore.Data;
-using BookStore.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BookStore.Business;
 using BookStore.Ioc;
 
 namespace BookStore.Winform
@@ -26,12 +18,8 @@ namespace BookStore.Winform
             try
             {
                 var container = Bootstrapper.Initialise();
-                var class1 = container.Resolve(typeof (Interface1), "") as Interface1;
-
-                //class1.doSomething();
 
                 var service = container.Resolve(typeof(ICategoryService), "") as ICategoryService;
-
 
                 dataGridView1.DataSource = service.GetAll().ToList();
             }
@@ -39,8 +27,6 @@ namespace BookStore.Winform
             {
                 MessageBox.Show(ee.Message);
             }
-    
         }
-
     }
 }

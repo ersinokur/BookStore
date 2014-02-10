@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using BookStore.Domain.EntitiesMetadata;
 
 namespace BookStore.Domain.Entities
 {
-   [MetadataType(typeof(AuthorMetadata))]
-   public class Author : BaseEntity<int>
+    // [MetadataType(typeof(AuthorMetadata))]
+    public class Author : BaseEntity
     {
-        public string FirstName  { get; set; }
+        public int AuthorId { get; set; }
+
+        public string FirstName { get; set; }
 
         public string LastName { get; set; }
 
